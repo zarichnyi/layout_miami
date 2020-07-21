@@ -1,7 +1,93 @@
 @import "utils";
 @import "fonts";
 @import "typography";
+@import "header";
 
 body {
   background: $c-gray;
+}
+
+.article {
+  margin-top: 140px;
+}
+
+.main {
+  width: $container-width;
+  margin: 0 auto;
+
+  .about-us {
+    margin-top: 104px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    &__headline {
+      font-size: 48px;
+      line-height: 48px;
+
+      &--excerpt {
+        color: #0075ff;
+      }
+    }
+
+    &__desc-subtitle {
+      font-size: 24px;
+      color: #0075ff;
+    }
+
+    &__desc-text {
+      font-size: 16px;
+      color: #3e3e3e;
+      margin-top: 36px;
+
+      &:nth-child(2) {
+        margin-top: 16px;
+      }
+
+      &--slogan {
+        font-weight: 700;
+      }
+    }
+  }
+
+  .gallery {
+    display: grid;
+
+    &__heading {
+      justify-self: center;
+      font-size: 48px;
+      text-transform: capitalize;
+      position: relative;
+
+      &::before {
+        content: url(/images/crown.svg);
+        position: absolute;
+        bottom: -25px;
+        left: 65px;
+      }
+    }
+
+    &__grid-1-3 {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      justify-items: stretch;
+      grid-gap: 20px;
+    }
+
+    &__image {
+      height: 256px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    &__adress {
+      font-size: 16px;
+    }
+
+    &__adress-link {
+      color: #0075ff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  }
 }

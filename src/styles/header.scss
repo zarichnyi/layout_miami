@@ -1,0 +1,95 @@
+.header {
+  background: url(/images/header.jpg) center / cover;
+  height: 100vh;
+  position: relative;
+
+  &__container {
+    max-width: $container-width;
+    margin: 0 auto;
+  }
+
+  &__top-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 24px;
+  }
+
+  &__logo {
+    width: 115px;
+    height: 76px;
+    cursor: pointer;
+  }
+
+  &__phone-number {
+    @extend %header-style-top;
+  }
+
+  &__scrol-to-form {
+    @extend %header-style-top;
+
+    position: relative;
+    padding-bottom: 8px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: #fff;
+      width: 100%;
+      height: 1px;
+    }
+  }
+
+  &__main-content {
+    position: absolute;
+    bottom: 48px;
+    width: $container-width;
+  }
+
+  &__headline {
+    display: flex;
+    text-transform: capitalize;
+    font-size: 60px;
+    line-height: 60px;
+    letter-spacing: -1.5px;
+    color: #fff;
+    width: 32%;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 10%;
+      background-color: #fff;
+      top: -13px;
+    }
+  }
+
+  &__ul-item {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+  }
+
+  &__li-item {
+    border-radius: 8px;
+    &--is-active {
+      background-color: hsla(0, 0%, 100%, 0.1);
+    }
+  }
+
+  &__nav-link {
+    @extend %header-style-top;
+
+    display: block;
+    padding: 8px 24px;
+    border-radius: 8px;
+    font-weight: 700;
+    color: #fff;
+    font-family: $f-family;
+  }
+}
