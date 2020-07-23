@@ -1,6 +1,114 @@
+%hover-eclipse {
+  transition: 0.4s;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+%hover-zoom-efect {
+  transition: 0.5s;
+
+  &:hover {
+    box-shadow: 0 6px 23px rgba(0, 117, 255, 0.7);
+    transform: scale(1.05);
+  }
+}
+
 %header-style-top {
   letter-spacing: 2px;
-  text-decoration: none;
   text-transform: uppercase;
   color: #fff;
+  @extend %hover-eclipse;
+}
+
+%logo {
+  width: 115px;
+  height: 76px;
+  cursor: pointer;
+}
+
+%subtitle-desc {
+  font-size: 24px;
+  color: $theme-color;
+}
+
+%desc-text {
+  line-height: 27px;
+  font-size: 16px;
+  color: #3e3e3e;
+  margin-top: 36px;
+}
+
+%gallery-img {
+  height: 256px;
+  max-width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+%headline-section {
+  padding-top: 150px;
+  justify-self: center;
+  font-size: 48px;
+  text-transform: capitalize;
+  position: relative;
+
+  &::before {
+    content: url(/images/crown.svg);
+    position: absolute;
+    bottom: -25px;
+    left: calc(50% - 10px);
+  }
+}
+
+%form {
+  width: 413px;
+  height: 48px;
+  padding-left: 17px;
+  outline: none;
+  font-size: 14px;
+  font-family: $f-family;
+  border-radius: 8px;
+  background: #f7f8ff;
+  border: 1px solid $white-color;
+  transition: 0.3s;
+
+  &::placeholder {
+    opacity: 0.5;
+  }
+
+  &:focus {
+    background-color: rgba(223, 224, 230, 0.8);
+    box-shadow: 0 6px 23px rgba(0, 117, 255, 0.2);
+  }
+}
+
+%minmax-width-container {
+  min-width: 400px;
+  max-width: 1150px;
+}
+
+%hide-block-for-mobile {
+  @media screen and (max-width: $container-width) {
+    display: none;
+  }
+}
+
+%show-block-for-pc {
+  @media screen and (min-width: $container-width) {
+    display: block;
+  }
+}
+
+%hide-block-for-pc {
+  @media screen and (min-width: $container-width) {
+    display: none;
+  }
+}
+
+%show-block-for-mobile {
+  @media screen and (max-width: $container-width) {
+    display: block;
+  }
 }

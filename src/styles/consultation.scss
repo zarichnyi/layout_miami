@@ -1,0 +1,49 @@
+.consultation {
+  display: grid;
+  row-gap: 80px;
+
+  &__heading {
+    @extend %headline-section;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @include grid-for-mobile;
+  }
+
+  &__subtitle {
+    @extend %subtitle-desc;
+  }
+
+  &__desc-text {
+    @extend %desc-text;
+    max-width: 100%;
+  }
+
+  &__form {
+    display: grid;
+    justify-content: end;
+    row-gap: 15px;
+    @media screen and (max-width: 900px) {
+      justify-self: center;
+    }
+  }
+
+  &__input {
+    @extend %form;
+  }
+
+  &__button {
+    margin-top: 16px;
+    border: 2px solid $theme-color;
+    height: 56px;
+    @include button($white-color, $theme-color);
+
+    &:hover {
+      background-color: $white-color;
+      box-shadow: 0 6px 23px rgba(0, 117, 255, 0.46);
+      color: $theme-color;
+    }
+  }
+}
