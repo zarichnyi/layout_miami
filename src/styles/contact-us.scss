@@ -42,6 +42,14 @@
     }
   }
 
+  &__item-phone {
+    color: #000;
+  }
+
+  &__item-email {
+    color: #000;
+  }
+
   &__form {
     @media screen and (max-width: $container-width) {
       justify-content: inherit;
@@ -81,7 +89,7 @@
     }
   }
 
-  @media screen and (max-width: $container-width){
+  @media screen and (max-width: $container-width) {
     justify-content: inherit;
   }
 }

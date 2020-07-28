@@ -94,7 +94,7 @@
     <main class="main container">
       <div class="container">
 
-        <article class="about-us" id="about-us">
+        <article class="about-us decorator" id="about-us">
           <h2 class="about-us__headline">
             Miami best<br>
             Real estate<a href="#" class="about-us__headline--excerpt"> here</a>
@@ -122,7 +122,7 @@
           </div>
         </article>
 
-        <article class="gallery" id="gallery">
+        <article class="gallery decorator" id="gallery">
           <h2 class="gallery__heading">gallery</h2>
 
           <section class="gallery__grid-3-1">
@@ -185,7 +185,7 @@
           <button class="gallery__button">View all</button>
         </article>
 
-        <article class="consultation" id="consultation">
+        <article class="consultation decorator" id="consultation">
           <h2 class="consultation__heading">consultation</h2>
           <div class="consultation__container">
 
@@ -233,7 +233,7 @@
           </div>
         </article>
 
-        <article class="testimonials" id="testimonials">
+        <article class="testimonials decorator" id="testimonials">
           <h2 class="testimonials__heading">testimonials</h2>
           <div class="testimonials__container">
 
@@ -281,7 +281,7 @@
           </div>
         </article>
 
-        <article class="contact-us" id="contacts">
+        <article class="contact-us decorator" id="contacts">
           <h2 class="contact-us__heading">
             contact us
           </h2>
@@ -292,11 +292,11 @@
               <section class="contact-us__contacts">
                 <section class="contact-us__contacts-item">
                   <p class="contact-us__contacts-item--title">Phone</p>
-                  <a href="tel:+12345555555">+1 234 555-55-55 </a>
+                  <a class="contact-us__item-phone" href="tel:+12345555555">+1 234 555-55-55 </a>
                 </section>
                 <section class="contact-us__contacts-item">
                   <p class="contact-us__contacts-item--title">Email</p>
-                  <a href="mailto:hello@miami.com">hello@miami.com </a>
+                  <a class="contact-us__item-email" href="mailto:hello@miami.com">hello@miami.com </a>
                 </section>
               </section>
               <section class="contact-us__contacts">
@@ -325,11 +325,13 @@
                 autocomplete="off"
                 required
               >
+
               <textarea
                 placeholder="Message"
                 class="contact-us__textarea"
                 autocomplete="off"
-              ></textarea>
+             ></textarea>
+
               <button class="contact-us__button">
                 Consultation
               </button>
@@ -340,7 +342,7 @@
         </article>
       </div>
     </main>
-    <footer class="footer">
+    <footer class="footer decorator">
       <img
         class="footer__logo"
         src="images/logo.png"
