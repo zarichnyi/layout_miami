@@ -23,7 +23,6 @@
   &__container {
     display: grid;
     align-items: baseline;
-    grid-template-rows: repeat(autofit, 1fr);
     grid-template-columns: 1fr 1fr;
   }
 
@@ -44,8 +43,8 @@
   }
 
   &__form {
-    @media screen and (max-width: 900px) {
-      justify-content: center;
+    @media screen and (max-width: $container-width) {
+      justify-content: inherit;
     }
     display: grid;
     justify-content: end;
@@ -53,10 +52,16 @@
   }
 
   &__input {
+    @media screen and (max-width: $container-width) {
+      width: 100%;
+    }
     @extend %form;
   }
 
   &__textarea {
+    @media screen and (max-width: $container-width) {
+      width: 100%;
+    }
     @extend %form;
     height: 144px;
     resize: none;
@@ -74,5 +79,9 @@
       box-shadow: 0 6px 23px rgba(0, 117, 255, 0.46);
       color: $theme-color;
     }
+  }
+
+  @media screen and (max-width: $container-width){
+    justify-content: inherit;
   }
 }

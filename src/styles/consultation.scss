@@ -10,6 +10,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     @include grid-for-mobile;
+    row-gap: 30px;
   }
 
   &__subtitle {
@@ -18,20 +19,22 @@
 
   &__desc-text {
     @extend %desc-text;
-    max-width: 100%;
   }
 
   &__form {
     display: grid;
     justify-content: end;
     row-gap: 15px;
-    @media screen and (max-width: 900px) {
-      justify-self: center;
+    @media screen and (max-width: $container-width) {
+      justify-content: inherit;
     }
   }
 
   &__input {
     @extend %form;
+    @media screen and (max-width: $container-width) {
+      width: 100%;
+    }
   }
 
   &__button {

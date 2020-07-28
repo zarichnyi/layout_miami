@@ -13,8 +13,15 @@ html {
   scroll-behavior: smooth;
 }
 
-.container {
-  @extend %minmax-width-container;
+body {
   margin: 0 auto;
-  padding: $out-border;
+}
+
+.container {
+ margin: 0 auto;
+ @extend %minmax-width-container;
+ @media screen and (max-width: 768px){
+  padding: 0 10px;
+ }
+ padding: 0 50px;
 }

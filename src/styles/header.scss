@@ -4,7 +4,7 @@
 
   &__container {
     @extend %minmax-width-container;
-    
+
     margin: 0 auto;
   }
 
@@ -13,6 +13,9 @@
     justify-content: space-between;
     align-items: center;
     padding: 24px 50px;
+    @media screen and (max-width: 767px){
+      padding: 24px 10px;
+     }
   }
 
   &__logo {
@@ -70,6 +73,9 @@
     bottom: 48px;
     width: 100%;
     padding: 0 50px;
+    @media screen and (max-width: 768px){
+      padding: 0 10px;
+     }
   }
 
   &__headline {
