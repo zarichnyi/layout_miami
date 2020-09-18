@@ -1,7 +1,34 @@
 @import "utils";
 @import "fonts";
-@import "typography";
+@import "header";
+@import "about-us";
+@import "gallery";
+@import "consultation";
+@import "testimonials";
+@import "contact-us";
+@import "footer";
+@import "mobile-menu-burger-animation";
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
-  background: $c-gray;
+  margin: 0 auto;
+}
+
+.container {
+  margin: 0 auto;
+  @extend %minmax-width-container;
+  @media screen and (max-width: 768px) {
+    padding: 0 10px;
+  }
+  padding: 0 50px;
+}
+
+.decorator {
+  padding-top: 150px;
+  @media screen and (max-width: 768px) {
+    padding-top: 70px;
+  }
 }

@@ -1,0 +1,127 @@
+.header {
+  background: url(/images/header.jpg) center / cover;
+  height: 100vh;
+
+  &__container {
+    @extend %minmax-width-container;
+
+    margin: 0 auto;
+  }
+
+  &__top-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 50px;
+    @media screen and (max-width: 767px) {
+      padding: 24px 10px;
+    }
+  }
+
+  &__logo {
+    @extend %logo;
+    @extend %hover-eclipse;
+
+    z-index: 1;
+  }
+
+  &__phone-number {
+    @extend %header-style-top;
+    @extend %hide-block-for-mobile;
+    @extend %show-block-for-pc;
+  }
+
+  &__phone-icon {
+    @extend %show-block-for-mobile;
+    @extend %hide-block-for-pc;
+
+    background: url(/images/vector.svg) no-repeat center;
+    height: 18px;
+    width: 18px;
+  }
+
+  &__burger-icon {
+    @extend %show-block-for-mobile;
+    @extend %hide-block-for-pc;
+
+    z-index: 1;
+  }
+
+  &__scrol-to-form {
+    @extend %header-style-top;
+    @extend %show-block-for-pc;
+    @extend %hide-block-for-mobile;
+
+    position: relative;
+    padding-bottom: 8px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: $white-color;
+      width: 100%;
+      height: 1px;
+    }
+  }
+
+  &__main-content {
+    @extend %minmax-width-container;
+
+    position: absolute;
+    bottom: 48px;
+    width: 100%;
+    padding: 0 50px;
+    @media screen and (max-width: 768px) {
+      padding: 0 10px;
+    }
+  }
+
+  &__headline {
+    display: flex;
+    text-transform: capitalize;
+    font-size: 60px;
+    line-height: 60px;
+    letter-spacing: -1.5px;
+    color: $white-color;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 30px;
+      background-color: #fff;
+      top: -13px;
+      left: 5px;
+    }
+  }
+
+  &__ul-item {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    white-space: nowrap;
+  }
+
+  &__li-item {
+    @extend %hide-block-for-mobile;
+
+    border-radius: 8px;
+    &--is-active {
+      background-color: hsla(0, 0%, 100%, 0.1);
+    }
+  }
+
+  &__nav-link {
+    @extend %header-style-top;
+
+    display: flex;
+    padding: 8px 24px;
+    border-radius: 8px;
+    font-weight: 700;
+    color: #fff;
+  }
+}

@@ -1,0 +1,35 @@
+.about-us {
+  @include grid-for-mobile;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding-top: 104px;
+  row-gap: 48px;
+
+  &__headline {
+    font-size: 48px;
+    line-height: 48px;
+
+    &--excerpt {
+      @extend %hover-eclipse;
+      color: $theme-color;
+    }
+  }
+
+  &__desc-subtitle {
+    @extend %subtitle-desc;
+  }
+
+  &__desc-text {
+    @extend %desc-text;
+
+    &:nth-child(2) {
+      margin-top: 16px;
+    }
+
+    &--slogan {
+      font-family: "Roboto-Bold", sans-serif;
+      font-weight: bold;
+    }
+  }
+}
