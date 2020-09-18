@@ -8,6 +8,8 @@ The landing page for Hotel Network.
 The project was created with:
 - HTML5
 - CSS3
+- Flex
+- Grid
 - SASS
 - Figma
 - BEM
