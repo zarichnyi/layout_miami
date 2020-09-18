@@ -6,17 +6,16 @@
 The landing page for Hotel Network.
 
 The project was created with:
+- HTML5
+- CSS3
+- SASS
+- Figma
+- BEM
 
-HTML5
-CSS3
-SASS
-Figma
-BEM
 Landing page has the responsive layout for various screen-widths:
-
-Large screens 2560px
-Full HD 1920px
-The design 1600px
-Notebook 1280px
-Tablet 1024
-Mobile (> 320px)
+- Large screens 2560px
+- Full HD 1920px
+- The design 1600px
+- Notebook 1280px
+- Tablet 1024
+- Mobile (> 320px)
