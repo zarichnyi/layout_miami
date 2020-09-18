@@ -203,7 +203,10 @@
               </p>
             </section>
 
-            <form action="" class="consultation__form">
+            <form
+                action=""
+                class="consultation__form"
+                method="GET">
               <input
                 type="text"
                 class="consultation__input"
@@ -214,7 +217,8 @@
               <input
                 type="tel"
                 class="consultation__input"
-                placeholder="Phone"
+                placeholder="Phone in format 1 234 555-55-55"
+                pattern="[1]{1}[0-9]{10}"
                 autocomplete="off"
                 required
               >
@@ -222,10 +226,14 @@
                 type="email"
                 class="consultation__input"
                 placeholder="Email"
+                maxlength="320"
                 autocomplete="off"
                 required
               >
-              <button class="consultation__button">
+              <button
+                class="consultation__button"
+                type="submit"
+              >
                 Consultation
               </button>
             </form>
@@ -310,7 +318,11 @@
               </section>
             </div>
 
-            <form action="" class="contact-us__form">
+            <form
+                action=""
+                class="contact-us__form"
+                method="GET"
+              >
               <input
                 type="text"
                 class="contact-us__input"
@@ -319,9 +331,10 @@
                 required
               >
               <input
-                type="tel"
+                type="email"
                 class="contact-us__input"
-                placeholder="Phone"
+                placeholder="Email"
+                maxlength="320"
                 autocomplete="off"
                 required
               >
@@ -332,7 +345,10 @@
                 autocomplete="off"
              ></textarea>
 
-              <button class="contact-us__button">
+              <button
+                class="contact-us__button"
+                type="submit"
+              >
                 Consultation
               </button>
             </form>
